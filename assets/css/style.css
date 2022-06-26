@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto auto auto;
+    grid-template-areas: "navbar   navbar    navbar"
+                        "headerbar headerbar headerbar"
+                        "footerbar footerbar footerbar";
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.navbar ul li{
+    padding: 10px;
+}
+.navbar ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    border-right: 1px solid#000;
+    padding-right: 8px;
+}
+
+.navbar h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    background-color: green;
+    margin: 10px;
+}
+
+.logo{
+    background-image: url(../img/vic.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+}
+
+.headerbar{
+    grid-area: headerbar;
+    display: flex;
+    align-items: center;
+}
+
+.parrafo{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.logoNosotros{
+    width: 100%;
+    align-items: center;
+}
+.tarjeta{
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+}
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.tarjeta__titulo{
+    font-size: 18px;
+}
+.tarjeta__descripcion{
+    font-size: 15px;
+    margin: 10px
+}
+.tarjeta__img{
+    width: 100%;
+    margin-top: 10px;
+}
+.tarjeta__btn{
+    margin: 10px;
+    background-color: green;
+    color: white;
+    padding: 8px 15px;
+    border: 0;
+    border-radius: 5px;
+}
+.footerbar{
+    grid-area: footerbar;
+    height: 60px;
+    margin: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: green;
+    display: flex;
+    padding: 4px;
+    justify-content: space-between;
+    align-items: center;
+}
